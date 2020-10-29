@@ -1,12 +1,8 @@
 /* global describe, it */
 var la = require('lazy-ass');
-var check = require('check-more-types');
 
 describe('make exact', function () {
   var makeExact = require('./make-exact');
-  it('is a function', function () {
-    la(check.fn(makeExact));
-  });
   it('returns false if there are no dependencies', function () {
     var needSaving = makeExact({});
     la(!needSaving);

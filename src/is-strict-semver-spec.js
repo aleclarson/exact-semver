@@ -1,13 +1,8 @@
 /* global describe, it */
 var la = require('lazy-ass');
-var check = require('check-more-types');
 
 describe('is-strict-semver', function () {
   var isStrictSemver = require('./is-strict-semver');
-
-  it('is a function', function () {
-    la(check.fn(isStrictSemver));
-  });
 
   it('returns false for undefined', function () {
     la(!isStrictSemver());

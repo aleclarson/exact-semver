@@ -34,8 +34,5 @@
     "lazy-ass": "1.0.0",
     "mocha": "2.3.4",
     "semantic-release": "4.3.5"
-  },
-  "dependencies": {
-    "check-more-types": "2.1.2"
   }
 }

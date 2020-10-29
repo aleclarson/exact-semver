@@ -1,13 +1,8 @@
 /* global describe, it */
 var la = require('lazy-ass');
-var check = require('check-more-types');
 
 describe('to-exact', function () {
   var toExact = require('./to-exact');
-
-  it('is a function', function () {
-    la(check.fn(toExact));
-  });
 
   it('passes already strict version', function () {
     var strictVersions = ['0.1.0', '1.1.0', '0.5.1'];
