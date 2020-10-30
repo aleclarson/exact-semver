@@ -1,6 +1,6 @@
 {
   "name": "@cush/exact-semver",
-  "description": "Removes fuzzy characters from listed dependencies in your package.json",
+  "description": "Update package.json to use exact dependency versions",
   "main": "src/make-exact.js",
   "bin": {
     "exact-semver": "bin/exact-semver.js"
@@ -13,10 +13,7 @@
     "exact-semver": "node ./bin/exact-semver.js"
   },
   "prettier": "@alloc/prettier-config",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bahmutov/exact-semver.git"
-  },
+  "repository": "aleclarson/exact-semver",
   "keywords": [
     "semver",
     "semantic",
@@ -25,12 +22,11 @@
     "precise",
     "utility"
   ],
-  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "author": "Alec Larson",
+  "contributors": [
+    "Gleb Bahmutov <gleb.bahmutov@gmail.com>"
+  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bahmutov/exact-semver/issues"
-  },
-  "homepage": "https://github.com/bahmutov/exact-semver#readme",
   "devDependencies": {
     "@alloc/prettier-config": "^1.0.0",
     "lazy-ass": "1.0.0",
