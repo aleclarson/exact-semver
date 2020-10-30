@@ -5,7 +5,7 @@
   "bin": {
     "exact-semver": "bin/exact-semver.js"
   },
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.1",
   "scripts": {
     "test": "mocha src/*-spec.js",
     "watch": "mocha src/*-spec.js --watch",
@@ -35,7 +35,6 @@
     "@alloc/prettier-config": "^1.0.0",
     "lazy-ass": "1.0.0",
     "mocha": "2.3.4",
-    "prettier": "^2.1.2",
-    "semantic-release": "4.3.5"
+    "prettier": "^2.1.2"
   }
 }
