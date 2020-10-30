@@ -3,7 +3,7 @@
   "description": "Removes fuzzy characters from listed dependencies in your package.json",
   "main": "src/make-exact.js",
   "bin": {
-    "exact-semver": "./bin/exact-semver.js"
+    "exact-semver": "bin/exact-semver.js"
   },
   "version": "0.0.0-semantic-release",
   "scripts": {
@@ -12,6 +12,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "exact-semver": "node ./bin/exact-semver.js"
   },
+  "prettier": "@alloc/prettier-config",
   "repository": {
     "type": "git",
     "url": "https://github.com/bahmutov/exact-semver.git"
@@ -31,8 +32,10 @@
   },
   "homepage": "https://github.com/bahmutov/exact-semver#readme",
   "devDependencies": {
+    "@alloc/prettier-config": "^1.0.0",
     "lazy-ass": "1.0.0",
     "mocha": "2.3.4",
+    "prettier": "^2.1.2",
     "semantic-release": "4.3.5"
   }
 }
