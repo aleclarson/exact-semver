@@ -1,5 +1,5 @@
 {
-  "name": "exact-semver",
+  "name": "@cush/exact-semver",
   "description": "Removes fuzzy characters from listed dependencies in your package.json",
   "main": "src/make-exact.js",
   "bin": {
