@@ -32,5 +32,8 @@
     "lazy-ass": "1.0.0",
     "mocha": "2.3.4",
     "prettier": "^2.1.2"
+  },
+  "dependencies": {
+    "import-from": "^3.0.0"
   }
 }

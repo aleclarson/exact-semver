@@ -1,14 +1,22 @@
-let isExactRE = /^[0-9]+\.[0-9]+\.[0-9]+$/
-let rangeSpecRE = /(^|@)[~^]/
+let importFrom = require('import-from')
 
-function makeExact(pkg) {
+let isExactRE = /(^|@)[0-9]/
+let nonExactRE = /(^|@)[~^].+/
+
+function makeExact(pkg, cwd = process.cwd()) {
   let changed = false
   let makeExact = dependencies =>
     dependencies &&
-    Object.entries(dependencies).forEach(([name, version]) => {
-      if (!isExactRE.test(version)) {
-        dependencies[name] = version.replace(rangeSpecRE, '$1')
-        changed = true
+    Object.entries(dependencies).forEach(([name, allowedVersion]) => {
+      if (!isExactRE.test(allowedVersion)) {
+        let installedVersion = importFrom(cwd, name + '/package.json').version
+        if (installedVersion) {
+          changed = true
+          dependencies[name] = allowedVersion.replace(
+            nonExactRE,
+            '$1' + installedVersion
+          )
+        }
       }
     })
 
