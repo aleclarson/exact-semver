@@ -1,4 +1,4 @@
-let importFrom = require('import-from')
+let findDependency = require('find-dependency')
 
 let isExactRE = /(^|@)[0-9]/
 let nonExactRE = /(^|@)[~^].+/
@@ -10,7 +10,8 @@ function makeExact(pkg, cwd = process.cwd()) {
     dependencies &&
     Object.entries(dependencies).forEach(([name, allowedVersion]) => {
       if (!isExactRE.test(allowedVersion) && !isLocalRE.test(allowedVersion)) {
-        let installedVersion = importFrom(cwd, name + '/package.json').version
+        let installedRoot = findDependency(name, cwd)
+        let installedVersion = require(installedRoot + '/package.json').version
         if (installedVersion) {
           changed = true
           dependencies[name] = allowedVersion.replace(

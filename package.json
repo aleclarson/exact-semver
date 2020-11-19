@@ -34,6 +34,6 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
-    "import-from": "^3.0.0"
+    "find-dependency": "^1.2.2"
   }
 }

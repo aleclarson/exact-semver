@@ -1,5 +1,5 @@
 dependencies:
-  import-from: 3.0.0
+  find-dependency: 1.2.2
 devDependencies:
   '@alloc/prettier-config': 1.0.0
   lazy-ass: 1.0.0
@@ -41,6 +41,10 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-Tbwv5nTnGUnK8/smlc5/LcHZqNE=
+  /find-dependency/1.2.2:
+    dev: false
+    resolution:
+      integrity: sha512-vLB/bvhiwDPvHW4/zWx8QX9mJh4fX5FScl6juiX+QD7ePP5KG5YZISUUzn1VWVZk9DtXBYEKOBMMxplVJoH/iQ==
   /glob/3.2.3:
     dependencies:
       graceful-fs: 2.0.3
@@ -60,14 +64,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-Sy3sjZB+k9szZiTc7AGDUC+MlCg=
-  /import-from/3.0.0:
-    dependencies:
-      resolve-from: 5.0.0
-    dev: false
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-CiuXOFFSzkU5x/CR0+z7T91Iht4CXgfCxVOFRhh2Zyhg5wOpWvvDLQUsWl+gcN+QscYBjez8hDCt85O7RLDttQ==
   /inherits/2.0.4:
     dev: true
     resolution:
@@ -144,12 +140,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
-  /resolve-from/5.0.0:
-    dev: false
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
   /sigmund/1.0.1:
     dev: true
     resolution:
@@ -163,7 +153,7 @@ packages:
       integrity: sha1-/x7R5hFp0Gs88tWI4YixjYhH4X4=
 specifiers:
   '@alloc/prettier-config': ^1.0.0
-  import-from: ^3.0.0
+  find-dependency: ^1.2.2
   lazy-ass: 1.0.0
   mocha: 2.3.4
   prettier: ^2.1.2
